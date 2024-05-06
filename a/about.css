@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+.page{
+    /* display: flex;
+    align-items: center;
+    
+    justify-content: flex-start; */
+    width: 100%;
+    /* height: 100vh; */
+    /* background-color: rgb(184, 222, 255); */
+}
+.page2{
+    /* display: flex;
+    align-items: center;
+    
+    justify-content: flex-start; */
+    width: 100%;
+    height: 80vh;
+    /* background-color: rgb(184, 222, 255); */
+}
+.page2 > h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    /* height: 100; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+.l{
+    width: 50%;
+    /* height: ; */
+}
+.l img{
+    height: 30rem;
+}
+.r{
+    width: 50%;
+}
+.r h2{
+    font-size: 70px;
+}
+.r p{
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 10px;
+}
+.rrr{
+    background-color: saddlebrown;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.card-con{
+      display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: static;
+    /* background-color: antiquewhite; */
+    /* padding: 50px; */
+    gap: 50px;
+}
+.card{
+    max-width: 400px; 
+     
+     background-color: rgb(255, 255, 255);
+     
+     border-radius: 10px;
+     padding: 30px;
+     margin-top: 80px;
+ }
+ .card .img{
+    width: 100%;
+    height: 200px;
+   border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.536);
+    margin-bottom: 10px;
+    transition: all 0.5s;
+    border-radius: 20px;
+
+}
+.card .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    object-position: top;
+
+}
+.card:hover .img{
+    transform: scale(0.9);
+    margin-top: -120px;
+}
+.content {
+    text-align: center;
+    height: 27px;
+    /* background-color: antiquewhite; */
+    overflow: hidden;
+    transition: 0.3s ease-in;
+}
+.card:hover .content{
+    height: 200px;
+}
+.card .content h2{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+.content p{
+    opacity: 0;
+    margin-bottom: 20px;
+    transition: 0.3s all ease;
+    transition-delay: 0.2s;
+}
+.card:hover .content p{
+    opacity: 1;
+}
+.content a{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgb(43, 43, 43);
+    display: inline-block;
+    color: white;
+    border-radius: 8px;
+    transition: 0.2s all ease;
+    opacity: 0;
+}
+.card:hover .content a{
+    background-color: black;
+    opacity: 1;
+}
+ .footer{
+    width: 100%;
+    height: 50vh;
+    background-color: #007aff;
+    
+    background-color: #b3b3b3;
+    background-color: #DDDDDD;
+
+    padding: 1rem;
+}
+.footer-t{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-logo{
+    width: 40%;
+
+}
+.footer-logo img{
+    height: 20vh;
+}
+.footer-links{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ gap: 50px;
+
+
+}
+.footer-links a{
+ text-decoration: none;
+ color: rgb(0, 0, 0);
+ font-size: 1.5rem;
+ transition: all ease-in-out;;
+}
+
+.footer-links a:hover{
+    text-decoration: none;
+    color: #000000;
+}
+.footer-b{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.social i{
+    font-size: 2.5rem;
+}
+.copy {
+    font-size:0.7rem;
+    margin-top: 10px;
+} 
+
+
+@media (max-width:800px) {
+    .page{
+
+    }
+    .card-con{
+        flex-wrap: wrap;
+        flex-direction: column;
+    gap: 10px;
+
+    }
+    .main{
+        flex-wrap: wrap;
+    }
+    .l{
+        width: 100%;
+        /* height: ; */
+    }
+    .l img{
+        height: 15rem;
+    }
+    .r{
+        width: 100%;
+    }
+    .r h2{
+        font-size: 40px;
+    }
+    .r p{
+        font-size: 15px;
+        text-align: justify;
+        margin-top: 10px;
+    }
+    .rrr{
+        background-color: saddlebrown;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    
+}

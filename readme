@@ -1,0 +1,17 @@
+
+before login
+
+index----- about✅ blog ✅ complaint-> javy pan submit❌ deshboard❌
+about----- index✅  blog✅   complaint-> javy pan submit❌ deshboard❌
+blog
+complaint
+deshboard
+
+
+
+after login
+✅index.html === login.html✅
+✅about.html === aflabout.html✅
+✅ combeforlogin.html === com.php✅
+✅ blog.html === aflblog.html✅
+✅ desh.html === desh.php✅
