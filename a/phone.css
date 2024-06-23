@@ -1,6 +1,7 @@
 @media (max-width: 1000px) {
   body{
     overflow: hidden;
+    position: relative;
   }
 /* <----------------------------------------------
  ---     LAG BOX PART        -------------------
