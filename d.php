@@ -1,5 +1,7 @@
 <?php
 include('co.php');
+require 'config.php';
+
 $id= $_GET['id'];
     
 $q="DELETE FROM a where id='$id'";

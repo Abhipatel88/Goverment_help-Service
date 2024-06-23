@@ -42,6 +42,9 @@ $rowww=mysqli_fetch_array($query);
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="main">
@@ -108,7 +111,7 @@ $rowww=mysqli_fetch_array($query);
       <!-- page1 -->
       <div class="page1 scroll-soomth">
 
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
           <h1>Register Complain</h1>
           <label for="name">Name:</label><br>
           <input type="text" id="name" name="name" required><br>
@@ -175,9 +178,16 @@ if($_POST['submit']){
   $pin_code = $_POST['pin_code'];
   $municipal_office = $_POST['municipal_office'];
   $complaint = $_POST['complaint'];
-  $attachment = $_POST['attachment'];
+  // $attachment = $_POST['attachment'];
+
+  $filename = $_FILES["attachment"]["name"];
+$tempname =$_FILES["attachment"]["tmp_name"];
+$folder ="upimg/".$filename;
+// echo $folder;
+move_uploaded_file($tempname ,$folder);
+
   // INSERT INTO `a` ( `name`, `email`, `phone`, `adrees`, `city`, `state`, `pincode`, `municipal`, `com`, `attach`) VALUES (NULL, 'C', 'abhipatel08820@gmail.com', '98599592', 'sdcasc', 'SCK ', 'SMCL', '32656', 'bsdjhbsd', 'kjnfb s', '');
- $q= "INSERT INTO  `a` (`name`, `email`, `phone`, `adrees`, `city`, `state`, `pincode`, `municipal`, `com`, `attach` , `postid`, `Status`) VALUES('$name','$email','$phone','$address','$city','$state','$pin_code','$municipal_office','$complaint','$attachment','$id','Panding');";
+ $q= "INSERT INTO  `a` (`name`, `email`, `phone`, `adrees`, `city`, `state`, `pincode`, `municipal`, `com`, `attach` , `postid`, `Status`) VALUES('$name','$email','$phone','$address','$city','$state','$pin_code','$municipal_office','$complaint','$folder','$id','Panding');";
 
  $data=mysqli_query($conn,$q);
 

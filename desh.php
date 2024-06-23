@@ -23,7 +23,12 @@ else{
     rel="stylesheet"
 />
 <link rel="icon" href="img/l.png" />
+
 <title>Gov. Help and Service</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
         <style>
             *{
@@ -70,6 +75,15 @@ else{
             }
             .delete{
                 background-color: red;
+                margin-top: 10px;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+            .view{
+              background-color: cadetblue;
                 margin-top: 10px;
                 border: none;
                 border-radius: 10px;
@@ -176,14 +190,14 @@ if($roq != 0){
             <th width="13%">EMAIL</th>
             <th width="5%">PHONE</th>
             <th width="20%">ADRESSS</th>
-            <th width="5%">City</th>
+            <th width="5%">CITY</th>
             <th width="5%">STATE</th>
             <th width="5%">PINCODE</th>
-            <th width="7%">Municipal</th>
+            <th width="7%">MUNICIPAL</th>
             <th width="20%">COMPLAINT</th>
-            <th width="7%">ATTACHMENT</th>
-            <th width="8%">op</th>
-            <th width="8%">Status</th>
+            <th width="7%">VIEW MORE</th>
+            <th width="8%">OPERATION</th>
+            <th width="8%">STATUS</th>
 
         </tr>
 
@@ -202,7 +216,7 @@ while($result = mysqli_fetch_assoc($query)){
         <td>". $result['pincode']."</td>
         <td>". $result['municipal']."</td>
         <td>". $result['com']."</td>
-        <td>". $result['attach']."</td>
+        <td><a href='viewphoto.php?id=$result[id]&&n=$result[name]&&e=$result[email]&&p=$result[phone]&&a=$result[adrees]&&c=$result[city]&&s=$result[state]&&pin=$result[pincode]&&ph=$result[attach]'> <input type='submit' value='View' class='view''>     </a></td>
 
 <td><a href='update.php?id=$result[id]&&n=$result[name]&&e=$result[email]&&p=$result[phone]&&a=$result[adrees]&&c=$result[city]&&s=$result[state]&&pin=$result[pincode]'> <input type='submit' value='Update' class='update'>     </a>
 

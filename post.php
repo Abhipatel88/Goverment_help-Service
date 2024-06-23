@@ -21,6 +21,9 @@ if (!empty($_SESSION["id"])) {
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="icon" href="img/l.png" />
   <title>Gov. Help and Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -95,6 +98,15 @@ if (!empty($_SESSION["id"])) {
         }
       }
     }
+    .view{
+              background-color: cadetblue;
+                margin-top: 10px;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
 
     h2 {
       background-color: white;
@@ -204,14 +216,14 @@ if ($roq != 0) {
         <th width="13%">EMAIL</th>
         <th width="5%">PHONE</th>
         <th width="20%">ADRESSS</th>
-        <th width="5%">City</th>
+        <th width="5%">CITY</th>
         <th width="5%">STATE</th>
         <th width="5%">PINCODE</th>
-        <th width="7%">Municipal</th>
+        <th width="7%">MUNICIPAL</th>
         <th width="20%">COMPLAINT</th>
-        <th width="7%">ATTACHMENT</th>
-        <th width="7%">Status</th>
-        <th width="8%">op</th>
+        <th width="7%">VIEW MORE</th>
+        <th width="7%">STATUS</th>
+        <th width="8%">OPERATION</th>
 
 
 
@@ -233,7 +245,7 @@ if ($roq != 0) {
         <td>" . $result['pincode'] . "</td>
         <td>" . $result['municipal'] . "</td>
         <td>" . $result['com'] . "</td>
-        <td>" . $result['attach'] . "</td>
+        <td><a href='admitview.php?id=$result[id]&&n=$result[name]&&e=$result[email]&&p=$result[phone]&&a=$result[adrees]&&c=$result[city]&&s=$result[state]&&pin=$result[pincode]&&ph=$result[attach]'> <input type='submit' value='View' class='view''>     </a></td>
         <td>". $result['Status']. "</td>
 
 <td><a href='accept.php?id=$result[id]'> <input type='submit' value='approve'  name='approve' class='update' onclick=' a()'  >    </a>

@@ -22,7 +22,11 @@ error_reporting(0);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- title -->
+  <title>Gov. Help and Service</title>
+
+<!-- tab bar logo  -->
+<link rel="icon" href="img/l.png" />
   <link rel="stylesheet" href="a/index.css">
   <link rel="stylesheet" href="a/com.css">
   <link rel="stylesheet" href="a/phone.css">
@@ -32,6 +36,9 @@ error_reporting(0);
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="main">
@@ -93,7 +100,7 @@ error_reporting(0);
       <!-- page1 -->
       <div class="page1 scroll-soomth">
 
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
           <h1>Update Your Complain</h1>
           <label for="name">Name:</label><br>
           <input type="text" id="name" name="name" value="<?php echo $result['name']; ?>" required><br>
@@ -148,10 +155,12 @@ if($_POST['submit']){
   $pin_code = $_POST['pin_code'];
   $municipal_office = $_POST['municipal_office'];
   $complaint = $_POST['complaint'];
-  $attachment = $_POST['attachment'];
+  // $attachment = $_POST['attachment'];
+
+  
   // INSERT INTO `a` ( `name`, `email`, `phone`, `adrees`, `city`, `state`, `pincode`, `municipal`, `com`, `attach`) VALUES (NULL, 'C', 'abhipatel08820@gmail.com', '98599592', 'sdcasc', 'SCK ', 'SMCL', '32656', 'bsdjhbsd', 'kjnfb s', '');
 //  $q= "INSERT INTO  `a` (`name`, `email`, `phone`, `adrees`, `city`, `state`, `pincode`, `municipal`, `com`, `attach`) VALUES('$name','$email','$phone','$address','$city','$state','$pin_code','$municipal_office','$complaint','$attachment');";
- $q= "UPDATE a SET name='$name', email='$email', phone='$phone', adrees='$address', city='$city', state='$state', pincode='$pin_code',municipal='$municipal_office', com='$complaint', attach='$attachment' WHERE id='$id'";
+ $q= "UPDATE a SET name='$name', email='$email', phone='$phone', adrees='$address', city='$city', state='$state', pincode='$pin_code',municipal='$municipal_office', com='$complaint',  WHERE id='$id'";
 
  $data=mysqli_query($conn,$q);
 
